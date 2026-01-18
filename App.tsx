@@ -20,7 +20,7 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-white font-sans">
       <Header />
       
       <main className="flex-grow">
@@ -39,12 +39,12 @@ const App: React.FC = () => {
       {!isChatOpen && (
         <button
           onClick={() => setIsChatOpen(true)}
-          className="fixed bottom-6 right-6 z-50 bg-red-600 hover:bg-red-700 text-white p-4 rounded-full shadow-2xl transition-all transform hover:scale-110 animate-bounce"
+          className="fixed bottom-6 right-6 z-50 bg-[#009B8F] hover:bg-[#00857a] text-white p-4 shadow-2xl transition-all transform hover:scale-105"
         >
           <MessageSquareText size={28} />
           <span className="absolute -top-1 -right-1 flex h-3 w-3">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-200 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
           </span>
         </button>
       )}

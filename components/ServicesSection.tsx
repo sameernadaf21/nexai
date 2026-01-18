@@ -1,43 +1,46 @@
 import React from 'react';
 import { SERVICES } from '../constants';
+import { ArrowRight } from 'lucide-react';
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Our Services
-          </h2>
-          <div className="h-1 w-20 bg-red-600 mx-auto rounded-full"></div>
-          <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
-            We provide end-to-end solutions for all your overseas career needs.
-          </p>
+    <section className="py-24 bg-white" id="services">
+      <div className="max-w-7xl mx-auto px-6 md:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+          <div className="max-w-2xl">
+             <span className="text-[#009B8F] font-bold tracking-widest text-xs uppercase mb-2 block">Our Expertise</span>
+             <h2 className="text-4xl md:text-5xl font-serif text-[#011E26] leading-tight">
+                Comprehensive Immigration Services
+             </h2>
+          </div>
+          <div className="hidden md:block">
+              <a href="#" className="inline-flex items-center gap-2 text-[#011E26] font-bold hover:text-[#009B8F] transition-colors uppercase text-xs tracking-widest">
+                View All Services <ArrowRight size={16} />
+              </a>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
           {SERVICES.map((service) => (
             <div 
               key={service.id} 
-              className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
+              className="group border-t border-gray-200 pt-8 hover:border-[#009B8F] transition-colors duration-300"
             >
-              <div className="p-8">
-                <div className="w-16 h-16 bg-red-600 rounded-2xl flex items-center justify-center mb-6 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg shadow-red-200">
-                  {service.icon}
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-red-600 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed mb-6">
-                  {service.description}
-                </p>
-                <a 
-                  href={service.link}
-                  className="inline-flex items-center text-red-600 font-semibold text-sm uppercase tracking-wide hover:underline"
-                >
-                  Read More
-                </a>
+              <div className="w-12 h-12 bg-[#011E26] group-hover:bg-[#009B8F] transition-colors duration-300 flex items-center justify-center mb-6">
+                {React.cloneElement(service.icon as React.ReactElement<any>, { className: "w-6 h-6 text-white" })}
               </div>
+              <h3 className="text-2xl font-serif text-[#011E26] mb-3 group-hover:text-[#009B8F] transition-colors">
+                {service.title}
+              </h3>
+              <p className="text-slate-600 leading-relaxed mb-6 font-light">
+                {service.description}
+              </p>
+              <a 
+                href={service.link}
+                className="inline-flex items-center text-[#011E26] font-bold text-xs uppercase tracking-widest group-hover:translate-x-2 transition-transform duration-300"
+              >
+                Learn More <ArrowRight size={14} className="ml-2"/>
+              </a>
             </div>
           ))}
         </div>

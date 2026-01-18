@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Star } from 'lucide-react';
 
 interface HeroProps {
   onConsultClick: () => void;
@@ -7,85 +7,60 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onConsultClick }) => {
   return (
-    <div className="relative bg-slate-900 text-white overflow-hidden">
+    <div className="relative bg-[#011E26] text-white overflow-hidden min-h-screen flex items-center">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" 
-          alt="World Travel" 
-          className="w-full h-full object-cover opacity-30"
+          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80" 
+          alt="Legal Meeting" 
+          className="w-full h-full object-cover opacity-40 mix-blend-overlay"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/90 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#011E26] via-[#011E26]/90 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#011E26]/50 to-[#011E26]"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-8 py-20 lg:py-32 flex flex-col md:flex-row items-center">
-        {/* Content */}
-        <div className="w-full md:w-2/3 space-y-8">
-          <div className="inline-flex items-center gap-2 bg-red-600/20 text-red-400 px-3 py-1 rounded-full text-xs md:text-sm font-semibold tracking-wider uppercase border border-red-600/30">
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-            #1 Overseas Career Consultant
-          </div>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 pt-20">
+        <div className="w-full lg:w-3/5 space-y-8">
           
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-            Create a life you love <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
-              Across borders.
-            </span>
+          {/* Google Reviews Badge */}
+          <div className="inline-flex items-center gap-2 mb-4">
+             <div className="flex gap-0.5 text-[#009B8F]">
+                {[1,2,3,4,5].map(i => <Star key={i} size={14} fill="currentColor" stroke="none"/>)}
+             </div>
+             <div className="flex flex-col leading-none">
+                 <span className="text-sm font-bold">4.8</span>
+                 <span className="text-[10px] text-slate-300">
+                    <span className="font-semibold text-white underline decoration-slate-500 underline-offset-2">404 Google Reviews</span> from satisfied clients
+                 </span>
+             </div>
+          </div>
+
+          {/* Heading */}
+          <h1 className="text-5xl md:text-7xl lg:text-8xl leading-tight font-serif font-light tracking-tight">
+            An Immigration Law <br/>
+            Firm You Can <span className="italic font-normal">Trust</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-300 max-w-xl">
-            Counseling | Visas | Coaching | Job Search. <br/>
-            We have helped over 1 million professionals achieve their global ambitions.
-          </p>
+          {/* Description */}
+          <div className="space-y-6 max-w-xl text-slate-300 font-light text-lg">
+            <p>
+              We build our immigration service around the concept of project managing every step of the application process.
+            </p>
+            <p className="italic border-l-2 border-[#009B8F] pl-4 text-slate-400">
+              "Westkin are an ambitious enterprise which operates efficiently and effectively, managing cases in a manner which is convenient and accessible."
+            </p>
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          {/* CTA */}
+          <div className="pt-8">
             <button 
               onClick={onConsultClick}
-              className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white rounded-lg font-bold text-lg transition-all transform hover:scale-105 shadow-lg shadow-red-900/50 flex items-center justify-center gap-2"
+              className="group inline-flex items-center gap-2 text-white font-bold tracking-widest uppercase text-sm border-b border-[#009B8F] pb-1 hover:text-[#009B8F] transition-colors"
             >
-              Free Counseling <ArrowRight size={20} />
-            </button>
-            <button className="px-8 py-4 bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 rounded-lg font-bold text-lg transition-all flex items-center justify-center gap-2">
-              Check Eligibility
+              Read More
+              <span className="w-8 h-[1px] bg-[#009B8F] group-hover:w-12 transition-all"></span>
             </button>
           </div>
-
-          <div className="flex flex-wrap gap-4 pt-8 text-sm text-slate-400">
-            <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-green-500"/> 50+ Offices
-            </div>
-            <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-green-500"/> 1500+ Employees
-            </div>
-            <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-green-500"/> 1 Million+ Success Stories
-            </div>
-          </div>
-        </div>
-
-        {/* Floating Form / Card - Visual Interest */}
-        <div className="hidden md:block w-1/3 pl-8">
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 p-6 rounded-2xl shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                <h3 className="text-xl font-bold mb-4">Trending Visas</h3>
-                <ul className="space-y-3">
-                    <li className="flex justify-between items-center border-b border-white/10 pb-2">
-                        <span>Canada Express Entry</span>
-                        <span className="text-green-400 text-sm">Open</span>
-                    </li>
-                    <li className="flex justify-between items-center border-b border-white/10 pb-2">
-                        <span>Australia PR 189/190</span>
-                        <span className="text-yellow-400 text-sm">High Demand</span>
-                    </li>
-                    <li className="flex justify-between items-center border-b border-white/10 pb-2">
-                        <span>Germany Opportunity Card</span>
-                        <span className="text-blue-400 text-sm">New</span>
-                    </li>
-                    <li className="flex justify-between items-center">
-                        <span>UK Skilled Worker</span>
-                        <span className="text-green-400 text-sm">Open</span>
-                    </li>
-                </ul>
-            </div>
         </div>
       </div>
     </div>

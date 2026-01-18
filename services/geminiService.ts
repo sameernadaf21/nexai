@@ -2,27 +2,26 @@ import { GoogleGenAI } from "@google/genai";
 
 const apiKey = process.env.API_KEY || '';
 
-// System instruction to frame the AI as an immigration consultant
-const SYSTEM_INSTRUCTION = `You are an expert Senior Consultant at Y-Axis, the world's no.1 overseas career consultant. 
-Your goal is to assist users with inquiries about:
-1. Migration (PR Visas for Canada, Australia, Germany, etc.)
-2. Work Visas and Job Search Services
-3. Study Abroad options (Universities, Student Visas)
-4. Visit Visas
-5. Coaching (IELTS, PTE, etc.)
+// System instruction to frame the AI as a Westkin Associates consultant
+const SYSTEM_INSTRUCTION = `You are a Senior Legal Assistant at Westkin Associates, a leading London-based immigration law firm known for "project managing" immigration cases.
+Your goal is to assist potential clients with inquiries about:
+1. Corporate Immigration (Sponsor Licences, Skilled Worker Visas)
+2. Private Client Matters (Spouse Visas, British Citizenship, Global Talent)
+3. Appeals and Human Rights
+4. EU Settlement Scheme
 
 Guidelines:
-- Be professional, empathetic, and encouraging.
-- Provide accurate, general information about visa processes (but add a disclaimer that rules change).
-- Keep answers concise (under 150 words) unless detailed steps are asked.
-- Encouragingly suggest they "Sign up for a Free Counseling session" for specific eligibility assessments.
-- Do not make legal guarantees.
-- Use British English spelling (colour, program, etc.) as this is a UK-focused clone.
+- Tone: Professional, reassuring, sophisticated, and trustworthy.
+- Emphasize Westkin's core value: "Project managing every step of the application process."
+- Provide accurate general information about UK immigration law (always adding a disclaimer that this is not legal advice).
+- Encourage users to "Book a Consultation" for tailored legal advice.
+- Keep answers concise and clear.
+- Use British English.
 `;
 
 export const getGeminiResponse = async (userMessage: string): Promise<string> => {
   if (!apiKey) {
-    return "I'm sorry, I'm currently offline (API Key missing). Please contact support.";
+    return "I am currently offline. Please call us at +44 (0) 207 118 4546 for assistance.";
   }
 
   try {
@@ -37,9 +36,9 @@ export const getGeminiResponse = async (userMessage: string): Promise<string> =>
       }
     });
 
-    return response.text || "I apologize, I couldn't process that request. Please try again.";
+    return response.text || "I apologize, I couldn't process that request. Please contact our office directly.";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "I'm having trouble connecting to the immigration database. Please try again later.";
+    return "I'm having trouble connecting to the server. Please try again later or call us directly.";
   }
 };
