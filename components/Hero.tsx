@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({ onConsultClick }) => {
           
           <div className="inline-flex items-center gap-2 mb-2 bg-[#009B8F]/10 px-3 py-1 rounded border border-[#009B8F]/30">
              <div className="w-2 h-2 rounded-full bg-[#009B8F] animate-pulse"></div>
-             <span className="text-xs font-bold tracking-widest text-[#009B8F] uppercase">#1 Overseas Career Consultant</span>
+             <span className="text-xs font-bold tracking-widest text-[#009B8F] uppercase">Premium Immigration Consultants</span>
           </div>
 
           <h1 className="text-5xl md:text-6xl lg:text-7xl leading-tight font-serif font-light tracking-tight">
@@ -35,7 +35,7 @@ const Hero: React.FC<HeroProps> = ({ onConsultClick }) => {
           
           <p className="text-slate-400 font-light text-lg md:text-xl max-w-xl leading-relaxed">
             Counseling | Visas | Coaching | Job Search. <br/>
-            We have helped over 1 million professionals achieve their global ambitions.
+            NexOverseas has helped thousands of professionals achieve their global ambitions.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -52,18 +52,18 @@ const Hero: React.FC<HeroProps> = ({ onConsultClick }) => {
 
           <div className="flex flex-wrap gap-6 pt-8 text-xs font-bold tracking-widest uppercase text-slate-500">
             <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-[#009B8F]"/> 50+ Offices
+                <CheckCircle2 size={16} className="text-[#009B8F]"/> 20+ Countries
             </div>
             <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-[#009B8F]"/> 1500+ Employees
+                <CheckCircle2 size={16} className="text-[#009B8F]"/> 500+ Experts
             </div>
             <div className="flex items-center gap-2">
-                <CheckCircle2 size={16} className="text-[#009B8F]"/> 1 Million+ Success Stories
+                <CheckCircle2 size={16} className="text-[#009B8F]"/> 10k+ Success Stories
             </div>
           </div>
         </div>
 
-        {/* Floating Card - Functional Element from Y-Axis, styled Westkin */}
+        {/* Floating Card */}
         <div className="w-full lg:w-1/3 pl-0 lg:pl-12">
             <div className="bg-[#00151a]/80 backdrop-blur-md border border-[#009B8F]/30 p-8 rounded-sm shadow-2xl relative transform rotate-1 hover:rotate-0 transition-transform duration-500 group">
                 <div className="absolute -top-3 -right-3 w-16 h-16 border-t-4 border-r-4 border-[#009B8F] rounded-tr-xl opacity-50 group-hover:opacity-100 transition-opacity"></div>

@@ -5,7 +5,7 @@ import { getGeminiResponse } from '../services/geminiService';
 
 const AIAssistant: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpen, onClose }) => {
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { role: 'model', text: 'Hello! I am your Y-Axis Immigration Assistant. How can I help you achieve your overseas dream today?', timestamp: new Date() }
+    { role: 'model', text: 'Hello! I am your NexOverseas Immigration Assistant. How can I help you achieve your global dream today?', timestamp: new Date() }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -43,11 +43,11 @@ const AIAssistant: React.FC<{ isOpen: boolean; onClose: () => void }> = ({ isOpe
         <div className="bg-[#011E26] p-4 flex justify-between items-center text-white">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-[#009B8F] flex items-center justify-center relative">
-               <span className="font-serif font-bold text-lg">Y</span>
+               <span className="font-serif font-bold text-lg">N</span>
                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 border-2 border-[#011E26] rounded-full"></span>
             </div>
             <div>
-              <h3 className="font-bold text-sm tracking-wide">Y-Axis Assistant</h3>
+              <h3 className="font-bold text-sm tracking-wide">NexOverseas Assistant</h3>
               <p className="text-[10px] text-slate-300 uppercase tracking-wider">Online</p>
             </div>
           </div>

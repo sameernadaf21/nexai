@@ -68,7 +68,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: 1,
     name: "Sarah Jenkins",
     visaType: "Canada PR",
-    message: "Y-Axis helped me navigate the complex Express Entry system. Their guidance was invaluable in boosting my CRS score.",
+    message: "NexOverseas helped me navigate the complex Express Entry system. Their guidance was invaluable in boosting my CRS score.",
     image: "https://picsum.photos/100/100?random=1"
   },
   {
@@ -82,7 +82,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: 3,
     name: "Elena Rodriguez",
     visaType: "UK Student Visa",
-    message: "From university selection to visa filing, the Y-Axis team was with me every step of the way.",
+    message: "From university selection to visa filing, the NexOverseas team was with me every step of the way.",
     image: "https://picsum.photos/100/100?random=3"
   }
 ];

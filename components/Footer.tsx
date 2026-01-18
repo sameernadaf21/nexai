@@ -10,11 +10,11 @@ const Footer: React.FC = () => {
           {/* Brand Col */}
           <div className="space-y-6">
              <div className="flex flex-col items-start leading-none text-white mb-6">
-                <span className="font-serif font-bold text-2xl tracking-wide">Y-AXIS</span>
-                <span className="text-[10px] tracking-[0.3em] uppercase opacity-70">Overseas Careers</span>
+                <span className="font-serif font-bold text-2xl tracking-wide">NEXOVERSEAS</span>
+                <span className="text-[10px] tracking-[0.3em] uppercase opacity-70">Global Consultants</span>
              </div>
              <p className="leading-relaxed text-sm">
-               Y-Axis is the world’s largest and most trusted overseas career consultant. We have been helping people achieve their global ambitions since 1999.
+               NexOverseas is a premium overseas career consultant. We guide you through every step of your international journey with expertise and integrity.
              </p>
              <div className="flex space-x-4 pt-4">
                 <a href="#" className="text-white hover:text-[#009B8F] transition-colors"><Linkedin size={20} /></a>
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-serif font-bold text-lg mb-6">Support</h4>
             <ul className="space-y-3">
-              {['About Y-Axis', 'Contact Us', 'Book a Consultation', 'Client Login', 'Privacy Policy', 'Refund Policy'].map(link => (
+              {['About NexOverseas', 'Contact Us', 'Book a Consultation', 'Client Login', 'Privacy Policy', 'Refund Policy'].map(link => (
                 <li key={link}>
                   <a href="#" className="hover:text-[#009B8F] transition-colors block text-sm">{link}</a>
                 </li>
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
               </li>
               <li className="flex gap-4">
                 <Mail className="text-[#009B8F] flex-shrink-0" size={20} />
-                <span>info@y-axis.co.uk</span>
+                <span>info@nexoverseas.com</span>
               </li>
             </ul>
           </div>
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
       {/* Bottom Bar */}
       <div className="border-t border-slate-800 bg-[#000f13] py-8">
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Y-Axis Solutions Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NexOverseas Solutions. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
              <a href="#" className="hover:text-white">Privacy Policy</a>
              <a href="#" className="hover:text-white">Terms of Use</a>

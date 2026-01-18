@@ -17,7 +17,7 @@ const Header: React.FC = () => {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 font-sans ${scrolled ? 'shadow-xl' : ''}`}>
       
-      {/* Top Bar - Functional Element from Y-Axis, styled Westkin Dark */}
+      {/* Top Bar */}
       <div className="bg-[#00151a] text-slate-400 text-[10px] md:text-xs py-2 px-6 md:px-8 border-b border-[#011E26]">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-6">
@@ -25,7 +25,7 @@ const Header: React.FC = () => {
               <Phone size={12} /> +44 20 300 0000
             </span>
             <span className="hidden sm:inline hover:text-[#009B8F] cursor-pointer transition-colors">
-              info@y-axis.co.uk
+              info@nexoverseas.com
             </span>
           </div>
           <div className="flex items-center space-x-6 uppercase tracking-widest font-bold">
@@ -42,11 +42,11 @@ const Header: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center gap-3 cursor-pointer group" onClick={() => window.location.hash = ''}>
              <div className="w-10 h-10 border border-white flex items-center justify-center relative bg-[#009B8F] group-hover:bg-white transition-all duration-500">
-                <span className="text-white group-hover:text-[#009B8F] font-serif font-bold text-xl transition-colors">Y</span>
+                <span className="text-white group-hover:text-[#009B8F] font-serif font-bold text-xl transition-colors">N</span>
              </div>
              <div className="flex flex-col leading-none text-white">
-                <span className="font-serif font-bold tracking-wide text-xl">Y-AXIS</span>
-                <span className="text-[9px] tracking-[0.2em] text-[#009B8F] uppercase font-bold">Overseas Careers</span>
+                <span className="font-serif font-bold tracking-wide text-xl">NEXOVERSEAS</span>
+                <span className="text-[9px] tracking-[0.2em] text-[#009B8F] uppercase font-bold">Global Consultants</span>
              </div>
           </div>
 

@@ -52,7 +52,7 @@ const QuickEnquiryForms: React.FC = () => {
                   <Send size={32} />
                 </div>
                 <h3 className="text-2xl font-serif text-[#011E26] mb-2">Request Received</h3>
-                <p className="text-slate-600">A Y-Axis consultant will contact you shortly.</p>
+                <p className="text-slate-600">A NexOverseas consultant will contact you shortly.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6 animate-fadeIn">
