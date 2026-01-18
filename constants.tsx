@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavItem, Service, Testimonial, Article } from './types';
-import { Plane, Briefcase, GraduationCap, MapPin, Anchor, BookOpen, Scale, Globe, FileText } from 'lucide-react';
+import { Plane, Briefcase, GraduationCap, MapPin, Anchor, BookOpen, UserCheck, Globe } from 'lucide-react';
 
+// Keeping Westkin Design Colors for the requested look
 export const BRAND_COLORS = {
   primary: '#009B8F', // Westkin Teal
   secondary: '#011E26', // Deep Dark Green/Black
@@ -9,81 +10,79 @@ export const BRAND_COLORS = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'SERVICES', href: '#services', subItems: ['Corporate Immigration', 'Private Client', 'Appeals', 'Sponsorship'] },
-  { label: 'ABOUT', href: '#about', subItems: ['Our Team', 'Our Story', 'Careers'] },
-  { label: 'FAQS', href: '#faqs' },
-  { label: 'LEARNING CENTRE', href: '#learning' },
-  { label: 'CONTACT', href: '#contact' },
+  { label: 'MIGRATE', href: '#migrate', subItems: ['Australia', 'Canada', 'Germany', 'UK', 'USA'] },
+  { label: 'WORK', href: '#work', subItems: ['Job Search Services', 'Resume Writing', 'LinkedIn Marketing'] },
+  { label: 'STUDY', href: '#study', subItems: ['Universities', 'Courses', 'Scholarships'] },
+  { label: 'VISAS', href: '#visas', subItems: ['Visitor Visa', 'Student Visa', 'Dependent Visa'] },
+  { label: 'COACHING', href: '#coaching', subItems: ['IELTS', 'PTE', 'TOEFL', 'GRE', 'GMAT'] },
+  { label: 'INVEST', href: '#invest' },
 ];
 
 export const SERVICES: Service[] = [
   {
-    id: 'corporate',
-    title: 'Corporate Immigration',
-    icon: <Briefcase className="w-8 h-8 text-white" />,
-    description: 'Expert guidance for businesses sponsoring skilled workers and navigating compliance.',
-    link: '#corporate'
-  },
-  {
-    id: 'private',
-    title: 'Private Client',
-    icon: <UserCheck className="w-8 h-8 text-white" />,
-    description: 'Bespoke visa solutions for individuals, families, and high-net-worth investors.',
-    link: '#private'
-  },
-  {
-    id: 'appeals',
-    title: 'Appeals & Human Rights',
-    icon: <Scale className="w-8 h-8 text-white" />,
-    description: 'Specialist legal representation for complex refusals and human rights claims.',
-    link: '#appeals'
-  },
-  {
-    id: 'nationality',
-    title: 'British Nationality',
-    icon: <Globe className="w-8 h-8 text-white" />,
-    description: 'Naturalisation and registration services to help you become a British citizen.',
-    link: '#nationality'
-  },
-  {
-    id: 'student',
-    title: 'Student Visas',
-    icon: <GraduationCap className="w-8 h-8 text-white" />,
-    description: 'Assisting international students with Tier 4 and student route applications.',
-    link: '#student'
-  },
-  {
-    id: 'eu',
-    title: 'EU Nationals',
+    id: 'migrate',
+    title: 'Migrate Overseas',
     icon: <Plane className="w-8 h-8 text-white" />,
-    description: 'Settlement schemes and visa routes for European nationals post-Brexit.',
-    link: '#eu'
+    description: 'Permanent Residency (PR) visas for Canada, Australia, UK, Germany, and more.',
+    link: '#migrate'
+  },
+  {
+    id: 'work',
+    title: 'Work Overseas',
+    icon: <Briefcase className="w-8 h-8 text-white" />,
+    description: 'Expert guidance on job search, resume marketing, and work permits.',
+    link: '#work'
+  },
+  {
+    id: 'study',
+    title: 'Study Overseas',
+    icon: <GraduationCap className="w-8 h-8 text-white" />,
+    description: 'Admissions assistance for top universities in USA, UK, Canada, Australia.',
+    link: '#study'
+  },
+  {
+    id: 'coaching',
+    title: 'Coaching',
+    icon: <BookOpen className="w-8 h-8 text-white" />,
+    description: 'World-class coaching for IELTS, PTE, TOEFL, GRE, GMAT, SAT and German.',
+    link: '#coaching'
+  },
+  {
+    id: 'visa',
+    title: 'Visa Services',
+    icon: <MapPin className="w-8 h-8 text-white" />,
+    description: 'Tourist, Business, and Dependent visas for 50+ countries.',
+    link: '#visa'
+  },
+  {
+    id: 'invest',
+    title: 'Invest Overseas',
+    icon: <Anchor className="w-8 h-8 text-white" />,
+    description: 'Business and Investment visa solutions for entrepreneurs.',
+    link: '#invest'
   },
 ];
-
-// Re-import UserCheck as it was used in SERVICES but not imported in the original constants
-import { UserCheck } from 'lucide-react';
 
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
-    name: "James Anderson",
-    visaType: "Sponsor Licence",
-    message: "Westkin's project management of our sponsor licence application was impeccable. Efficient, clear, and successful.",
+    name: "Sarah Jenkins",
+    visaType: "Canada PR",
+    message: "Y-Axis helped me navigate the complex Express Entry system. Their guidance was invaluable in boosting my CRS score.",
     image: "https://picsum.photos/100/100?random=1"
   },
   {
     id: 2,
-    name: "Priya Patel",
-    visaType: "Spouse Visa",
-    message: "We were overwhelmed by the paperwork, but the team at Westkin made the process seamless. Highly recommended.",
+    name: "Rajesh Kumar",
+    visaType: "Australia Work Visa",
+    message: "The job search service was a game changer. I landed interviews within weeks of updating my resume with their help.",
     image: "https://picsum.photos/100/100?random=2"
   },
   {
     id: 3,
-    name: "Michael Schmidt",
-    visaType: "Global Talent Visa",
-    message: "A truly professional law firm. Their advice was pragmatic and tailored exactly to my situation.",
+    name: "Elena Rodriguez",
+    visaType: "UK Student Visa",
+    message: "From university selection to visa filing, the Y-Axis team was with me every step of the way.",
     image: "https://picsum.photos/100/100?random=3"
   }
 ];
@@ -91,23 +90,23 @@ export const TESTIMONIALS: Testimonial[] = [
 export const LATEST_NEWS: Article[] = [
   {
     id: 1,
-    title: "Changes to the Skilled Worker Visa Salary Thresholds 2025",
-    date: "Dec 12, 2024",
-    category: "Immigration Rules",
-    image: "https://picsum.photos/400/250?random=20"
+    title: "Canada announces new category-based selection for Express Entry",
+    date: "Oct 24, 2024",
+    category: "Immigration News",
+    image: "https://picsum.photos/400/250?random=10"
   },
   {
     id: 2,
-    title: "Understanding the New Electronic Travel Authorisation (ETA)",
-    date: "Nov 28, 2024",
-    category: "Travel News",
-    image: "https://picsum.photos/400/250?random=21"
+    title: "Australia reviews skilled migration list for 2025",
+    date: "Oct 22, 2024",
+    category: "Visa Updates",
+    image: "https://picsum.photos/400/250?random=11"
   },
   {
     id: 3,
-    title: "How to Switch from a Student Visa to a Work Visa",
-    date: "Nov 15, 2024",
-    category: "Guides",
-    image: "https://picsum.photos/400/250?random=22"
+    title: "Germany introduces Opportunity Card for skilled workers",
+    date: "Oct 20, 2024",
+    category: "Work Overseas",
+    image: "https://picsum.photos/400/250?random=12"
   }
 ];

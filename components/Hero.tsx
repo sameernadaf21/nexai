@@ -11,8 +11,8 @@ const Hero: React.FC<HeroProps> = ({ onConsultClick }) => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1932&q=80" 
-          alt="Legal Meeting" 
+          src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80" 
+          alt="World Travel" 
           className="w-full h-full object-cover opacity-40 mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#011E26] via-[#011E26]/90 to-transparent"></div>
@@ -22,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ onConsultClick }) => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-8 pt-20">
         <div className="w-full lg:w-3/5 space-y-8">
           
-          {/* Google Reviews Badge */}
+          {/* Google Reviews Badge - Keeping this design element */}
           <div className="inline-flex items-center gap-2 mb-4">
              <div className="flex gap-0.5 text-[#009B8F]">
                 {[1,2,3,4,5].map(i => <Star key={i} size={14} fill="currentColor" stroke="none"/>)}
@@ -35,19 +35,19 @@ const Hero: React.FC<HeroProps> = ({ onConsultClick }) => {
              </div>
           </div>
 
-          {/* Heading */}
+          {/* Heading - Y-Axis Content with Westkin Style */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl leading-tight font-serif font-light tracking-tight">
-            An Immigration Law <br/>
-            Firm You Can <span className="italic font-normal">Trust</span>
+            Create A Life <br/>
+            You Love <span className="italic font-normal">Across Borders</span>
           </h1>
           
           {/* Description */}
           <div className="space-y-6 max-w-xl text-slate-300 font-light text-lg">
             <p>
-              We build our immigration service around the concept of project managing every step of the application process.
+              Counseling | Visas | Coaching | Job Search. We help you achieve your global ambitions.
             </p>
             <p className="italic border-l-2 border-[#009B8F] pl-4 text-slate-400">
-              "Westkin are an ambitious enterprise which operates efficiently and effectively, managing cases in a manner which is convenient and accessible."
+              "Y-Axis is the world's largest and most trusted overseas career consultant."
             </p>
           </div>
 
@@ -57,7 +57,7 @@ const Hero: React.FC<HeroProps> = ({ onConsultClick }) => {
               onClick={onConsultClick}
               className="group inline-flex items-center gap-2 text-white font-bold tracking-widest uppercase text-sm border-b border-[#009B8F] pb-1 hover:text-[#009B8F] transition-colors"
             >
-              Read More
+              Check Eligibility
               <span className="w-8 h-[1px] bg-[#009B8F] group-hover:w-12 transition-all"></span>
             </button>
           </div>

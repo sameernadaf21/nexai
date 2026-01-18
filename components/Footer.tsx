@@ -10,11 +10,11 @@ const Footer: React.FC = () => {
           {/* Brand Col */}
           <div className="space-y-6">
              <div className="flex flex-col items-start leading-none text-white mb-6">
-                <span className="font-serif font-bold text-2xl tracking-wide">westkin</span>
-                <span className="text-[10px] tracking-[0.3em] uppercase opacity-70">associates</span>
+                <span className="font-serif font-bold text-2xl tracking-wide">Y-AXIS</span>
+                <span className="text-[10px] tracking-[0.3em] uppercase opacity-70">Overseas Careers</span>
              </div>
              <p className="leading-relaxed text-sm">
-               Westkin Associates is a leading immigration law firm based in Mayfair, London. We provide specialized legal advice for both corporate and private clients.
+               Y-Axis is the world’s largest and most trusted overseas career consultant. We have been helping people achieve their global ambitions since 1999.
              </p>
              <div className="flex space-x-4 pt-4">
                 <a href="#" className="text-white hover:text-[#009B8F] transition-colors"><Linkedin size={20} /></a>
@@ -26,9 +26,9 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-serif font-bold text-lg mb-6">Expertise</h4>
+            <h4 className="text-white font-serif font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3">
-              {['Corporate Immigration', 'Sponsor Licences', 'Skilled Worker Visa', 'Spouse Visa', 'British Citizenship', 'Appeals'].map(link => (
+              {['Migrate Overseas', 'Work Overseas', 'Study Abroad', 'Visas', 'Invest', 'Coaching'].map(link => (
                 <li key={link}>
                   <a href="#" className="hover:text-[#009B8F] transition-colors block text-sm">{link}</a>
                 </li>
@@ -38,9 +38,9 @@ const Footer: React.FC = () => {
 
           {/* Legal / Support */}
           <div>
-            <h4 className="text-white font-serif font-bold text-lg mb-6">The Firm</h4>
+            <h4 className="text-white font-serif font-bold text-lg mb-6">Support</h4>
             <ul className="space-y-3">
-              {['About Westkin', 'Our Team', 'Careers', 'Client Reviews', 'News & Insights', 'Contact Us'].map(link => (
+              {['About Y-Axis', 'Contact Us', 'Book a Consultation', 'Client Login', 'Privacy Policy', 'Refund Policy'].map(link => (
                 <li key={link}>
                   <a href="#" className="hover:text-[#009B8F] transition-colors block text-sm">{link}</a>
                 </li>
@@ -54,15 +54,15 @@ const Footer: React.FC = () => {
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <MapPin className="text-[#009B8F] flex-shrink-0" size={20} />
-                <span className="leading-relaxed">5th Floor, Maddox House,<br/>1 Maddox Street,<br/>Mayfair, London, W1S 2PZ</span>
+                <span className="leading-relaxed">Level 1, 123 Business Park,<br/>London, UK SW1A 1AA</span>
               </li>
               <li className="flex gap-4">
                 <Phone className="text-[#009B8F] flex-shrink-0" size={20} />
-                <span className="text-white font-bold">+44 (0) 207 118 4546</span>
+                <span className="text-white font-bold">+44 20 300 0000</span>
               </li>
               <li className="flex gap-4">
                 <Mail className="text-[#009B8F] flex-shrink-0" size={20} />
-                <span>info@westkin.com</span>
+                <span>info@y-axis.co.uk</span>
               </li>
             </ul>
           </div>
@@ -72,7 +72,7 @@ const Footer: React.FC = () => {
       {/* Bottom Bar */}
       <div className="border-t border-slate-800 bg-[#000f13] py-8">
         <div className="max-w-7xl mx-auto px-6 md:px-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-          <p>&copy; {new Date().getFullYear()} Westkin Associates. Regulated by OISC (F200900067).</p>
+          <p>&copy; {new Date().getFullYear()} Y-Axis Solutions Pvt. Ltd. All rights reserved.</p>
           <div className="flex gap-6 mt-4 md:mt-0">
              <a href="#" className="hover:text-white">Privacy Policy</a>
              <a href="#" className="hover:text-white">Terms of Use</a>

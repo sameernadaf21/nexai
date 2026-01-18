@@ -24,15 +24,15 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex justify-between items-center">
           
-          {/* Logo */}
+          {/* Logo - Styled like Westkin but with Y-Axis text */}
           <div className="flex items-center gap-3 cursor-pointer group">
              <div className="w-10 h-10 border border-white flex items-center justify-center relative bg-white/10 group-hover:bg-white/20 transition-all">
-                <span className="text-white font-serif font-bold text-xl">W</span>
+                <span className="text-white font-serif font-bold text-xl">Y</span>
                 <span className="absolute -top-1 -right-1 w-2 h-2 bg-[#009B8F]"></span>
              </div>
              <div className="flex flex-col leading-none text-white">
-                <span className="font-bold tracking-wide text-lg">westkin</span>
-                <span className="text-[10px] tracking-[0.2em] text-slate-300">associates</span>
+                <span className="font-bold tracking-wide text-lg">Y-AXIS</span>
+                <span className="text-[10px] tracking-[0.2em] text-slate-300">OVERSEAS CAREERS</span>
              </div>
           </div>
 
@@ -55,8 +55,8 @@ const Header: React.FC = () => {
           {/* Actions - Right */}
           <div className="hidden lg:flex items-center gap-6">
             <div className="text-right text-white hidden xl:block">
-              <div className="text-[10px] uppercase tracking-wider text-slate-400">Call Us</div>
-              <div className="text-sm font-bold tracking-wide">+44 (0) 207 118 4546</div>
+              <div className="text-[10px] uppercase tracking-wider text-slate-400">Talk to us</div>
+              <div className="text-sm font-bold tracking-wide">+44 20 300 0000</div>
             </div>
             
             <WhatsAppIcon />
@@ -64,7 +64,7 @@ const Header: React.FC = () => {
             <button 
               className="bg-[#009B8F] hover:bg-[#00857a] text-white text-xs font-bold py-3 px-6 uppercase tracking-widest transition-colors"
             >
-              Book Appointment
+              Free Counseling
             </button>
           </div>
 
@@ -96,10 +96,10 @@ const Header: React.FC = () => {
             <div className="flex flex-col gap-4 text-white">
                 <div>
                    <span className="block text-xs text-slate-400 uppercase">Call Us</span>
-                   <span className="font-bold">+44 (0) 207 118 4546</span>
+                   <span className="font-bold">+44 20 300 0000</span>
                 </div>
                 <button className="w-full py-4 text-center bg-[#009B8F] text-white text-xs font-bold uppercase tracking-widest">
-                    Book Appointment
+                    Free Counseling
                 </button>
             </div>
           </div>

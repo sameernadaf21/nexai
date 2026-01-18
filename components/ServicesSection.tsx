@@ -8,9 +8,9 @@ const ServicesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-2xl">
-             <span className="text-[#009B8F] font-bold tracking-widest text-xs uppercase mb-2 block">Our Expertise</span>
+             <span className="text-[#009B8F] font-bold tracking-widest text-xs uppercase mb-2 block">Our Services</span>
              <h2 className="text-4xl md:text-5xl font-serif text-[#011E26] leading-tight">
-                Comprehensive Immigration Services
+                World Class Overseas Careers
              </h2>
           </div>
           <div className="hidden md:block">
