@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import QuickEnquiryForms from './components/QuickEnquiryForms';
 import ServicesSection from './components/ServicesSection';
 import { NewsSection, TestimonialsSection } from './components/InfoSections';
 import Footer from './components/Footer';
@@ -25,6 +26,7 @@ const App: React.FC = () => {
       
       <main className="flex-grow">
         <Hero onConsultClick={() => setIsChatOpen(true)} />
+        <QuickEnquiryForms />
         <ServicesSection />
         <TestimonialsSection />
         <NewsSection />
