@@ -5,6 +5,7 @@ import QuickEnquiryForms from './components/QuickEnquiryForms';
 import ServicesSection from './components/ServicesSection';
 import { NewsSection, TestimonialsSection } from './components/InfoSections';
 import Footer from './components/Footer';
+import AboutSection from './components/AboutSection';
 import AIAssistant from './components/AIAssistant';
 import { MessageSquareText } from 'lucide-react';
 
@@ -23,11 +24,12 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white font-sans">
       <Header />
-      
+
       <main className="flex-grow">
         <Hero onConsultClick={() => setIsChatOpen(true)} />
         <QuickEnquiryForms />
         <ServicesSection />
+        <AboutSection />
         <TestimonialsSection />
         <NewsSection />
       </main>

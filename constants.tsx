@@ -10,12 +10,73 @@ export const BRAND_COLORS = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'MIGRATE', href: '#migrate', subItems: ['Australia', 'Canada', 'Germany', 'UK', 'USA'] },
-  { label: 'WORK', href: '#work', subItems: ['Job Search Services', 'Resume Writing', 'LinkedIn Marketing'] },
-  { label: 'STUDY', href: '#study', subItems: ['Universities', 'Courses', 'Scholarships'] },
-  { label: 'VISAS', href: '#visas', subItems: ['Visitor Visa', 'Student Visa', 'Dependent Visa'] },
-  { label: 'COACHING', href: '#coaching', subItems: ['IELTS', 'PTE', 'TOEFL', 'GRE', 'GMAT'] },
-  { label: 'INVEST', href: '#invest' },
+  {
+    label: 'Admissions',
+    href: '#admissions',
+    subItems: [
+      'University Admission',
+      'College & School Admissions',
+      'Country Options',
+      'Course Selection Guidance',
+      'Application Support',
+      'SOP & Personal Statement Help',
+      'Document Preparation'
+    ]
+  },
+  {
+    label: 'Coaching',
+    href: '#coaching',
+    subItems: [
+      'Pre-Arrival Coaching',
+      'Academic Preparation',
+      'Skills Training',
+      'Interview Preparation',
+      'Language Support',
+      'Student Readiness Programs'
+    ]
+  },
+  {
+    label: 'Visa',
+    href: '#visa',
+    subItems: [
+      'Student Visa',
+      'Dependent Visa',
+      'Visitor Visa',
+      'Work Visa',
+      'Business Visa'
+    ]
+  },
+  {
+    label: 'Travel & Transport',
+    href: '#travel',
+    subItems: [
+      'Flight & Travel Assistance',
+      'Airport Pickup',
+      'Accommodation Support',
+      'Local Transport Guidance',
+      'Safety & Orientation',
+      'Travel Insurance Guidance',
+      'Pre-Departure Checklist'
+    ]
+  },
+  {
+    label: 'Immigration & Legal',
+    href: '#legal',
+    subItems: [
+      'Immigration Advisory',
+      'Student Visa Guidance',
+      'Document Verification',
+      'Legal Consultation',
+      'Compliance & Documentation',
+      'Dependent & Family Visa Application Support'
+    ]
+  },
+  {
+    label: 'About',
+    href: '#about',
+    subItems: ['About Nex Overseas']
+  },
+  { label: 'Contact', href: '#contact' },
 ];
 
 export const SERVICES: Service[] = [
@@ -48,11 +109,11 @@ export const SERVICES: Service[] = [
     link: '#coaching'
   },
   {
-    id: 'visa',
+    id: 'visas',
     title: 'Visa Services',
     icon: <MapPin className="w-8 h-8 text-white" />,
     description: 'Tourist, Business, and Dependent visas for 50+ countries.',
-    link: '#visa'
+    link: '#visas'
   },
   {
     id: 'invest',
