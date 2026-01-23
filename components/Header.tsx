@@ -46,7 +46,6 @@ const Header: React.FC = () => {
             </div>
             <div className="flex flex-col leading-none text-white">
               <span className="font-serif font-bold tracking-wide text-xl">NEXOVERSEAS</span>
-              <span className="text-[9px] tracking-[0.2em] text-[#009B8F] uppercase font-bold">Global Consultants</span>
             </div>
           </div>
 

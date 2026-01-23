@@ -1,7 +1,48 @@
-import React from 'react';
-import { CheckCircle2, Globe, GraduationCap, Scale, Briefcase, HeartHandshake, Plane, FileCheck } from 'lucide-react';
+import React, { useState } from 'react';
+import { CheckCircle2, Globe, GraduationCap, Scale, Briefcase, HeartHandshake, Plane, FileCheck, X, ArrowRight } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
+    const [showValuesModal, setShowValuesModal] = useState(false);
+    const [showProcessModal, setShowProcessModal] = useState(false);
+
+    // Prevent body scroll when modal is open
+    React.useEffect(() => {
+        if (showValuesModal || showProcessModal) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => { document.body.style.overflow = 'unset'; };
+    }, [showValuesModal, showProcessModal]);
+
+    const values = [
+        {
+            title: "Integrity & Transparency",
+            desc: "We provide honest, realistic guidance based on facts, not false promises. Every recommendation is rooted in what is genuinely best for the student or professional, ensuring trust at every step.",
+            icon: <Scale className="w-8 h-8 text-[#009B8F]" />
+        },
+        {
+            title: "Excellence in Preparation",
+            desc: "Success abroad begins long before departure. We focus on building strong applications, developing essential skills, and preparing students academically, culturally, and emotionally for life in a new country.",
+            icon: <CheckCircle2 className="w-8 h-8 text-[#009B8F]" />
+        },
+        {
+            title: "Student-Centric Support",
+            desc: "Every individual has a unique story, background, and ambition. We tailor our approach to match your strengths, challenges, and long-term goals, ensuring you receive guidance that feels personal and relevant.",
+            icon: <HeartHandshake className="w-8 h-8 text-[#009B8F]" />
+        },
+        {
+            title: "Global Perspective, Local Understanding",
+            desc: "We combine international expertise with an understanding of local needs. This balance allows us to bridge the gap between where you are and where you want to be.",
+            icon: <Globe className="w-8 h-8 text-[#009B8F]" />
+        },
+        {
+            title: "Commitment to Growth & Learning",
+            desc: "The world of education and immigration evolves constantly. Our team stays updated with the latest policies, university trends, and global opportunities so you always receive current, accurate, and strategic advice.",
+            icon: <GraduationCap className="w-8 h-8 text-[#009B8F]" />
+        }
+    ];
+
     return (
         <div className="bg-white font-sans text-slate-800" id="about">
 
@@ -26,41 +67,52 @@ const AboutSection: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {[
-                            {
-                                title: "Integrity & Transparency",
-                                desc: "We provide honest, realistic guidance based on facts, not false promises. Every recommendation is rooted in what is genuinely best for the student or professional, ensuring trust at every step.",
-                                icon: <Scale className="w-8 h-8 text-[#009B8F]" />
-                            },
-                            {
-                                title: "Excellence in Preparation",
-                                desc: "Success abroad begins long before departure. We focus on building strong applications, developing essential skills, and preparing students academically, culturally, and emotionally for life in a new country.",
-                                icon: <CheckCircle2 className="w-8 h-8 text-[#009B8F]" />
-                            },
-                            {
-                                title: "Student-Centric Support",
-                                desc: "Every individual has a unique story, background, and ambition. We tailor our approach to match your strengths, challenges, and long-term goals, ensuring you receive guidance that feels personal and relevant.",
-                                icon: <HeartHandshake className="w-8 h-8 text-[#009B8F]" />
-                            },
-                            {
-                                title: "Global Perspective, Local Understanding",
-                                desc: "We combine international expertise with an understanding of local needs. This balance allows us to bridge the gap between where you are and where you want to be.",
-                                icon: <Globe className="w-8 h-8 text-[#009B8F]" />
-                            },
-                            {
-                                title: "Commitment to Growth & Learning",
-                                desc: "The world of education and immigration evolves constantly. Our team stays updated with the latest policies, university trends, and global opportunities so you always receive current, accurate, and strategic advice.",
-                                icon: <GraduationCap className="w-8 h-8 text-[#009B8F]" />
-                            }
-                        ].map((value, i) => (
-                            <div key={i} className="bg-white p-8 border-t-4 border-[#009B8F] shadow-sm hover:shadow-md transition-shadow">
-                                <div className="mb-4">{value.icon}</div>
-                                <h3 className="text-xl font-serif text-[#011E26] mb-3">{value.title}</h3>
-                                <p className="text-sm text-slate-600 leading-relaxed">{value.desc}</p>
-                            </div>
-                        ))}
+                    <div className="flex justify-center mt-8">
+                        <button
+                            onClick={() => setShowValuesModal(true)}
+                            className="inline-flex items-center gap-2 border-2 border-[#009B8F] text-[#009B8F] px-8 py-3 font-bold tracking-widest uppercase text-xs hover:bg-[#009B8F] hover:text-white transition-all duration-300"
+                        >
+                            Read More <ArrowRight size={16} />
+                        </button>
                     </div>
+
+                    {/* Values Modal */}
+                    {showValuesModal && (
+                        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+                            {/* Backdrop */}
+                            <div
+                                className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+                                onClick={() => setShowValuesModal(false)}
+                            ></div>
+
+                            {/* Modal Content */}
+                            <div className="bg-white relative z-10 w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-sm shadow-2xl animate-fadeIn">
+                                <button
+                                    onClick={() => setShowValuesModal(false)}
+                                    className="absolute top-4 right-4 p-2 text-slate-400 hover:text-[#011E26] hover:bg-slate-100 rounded-full transition-colors sticky z-20"
+                                >
+                                    <X size={32} />
+                                </button>
+
+                                <div className="p-8 md:p-12">
+                                    <div className="text-center mb-10">
+                                        <span className="text-[#009B8F] font-bold tracking-widest text-xs uppercase mb-2 block">Core Principles</span>
+                                        <h2 className="text-3xl md:text-4xl font-serif text-[#011E26]">Our Mission & Values</h2>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                                        {values.map((value, i) => (
+                                            <div key={i} className="bg-slate-50 p-8 border-t-4 border-[#009B8F] hover:shadow-lg transition-shadow">
+                                                <div className="mb-4">{value.icon}</div>
+                                                <h3 className="text-xl font-serif text-[#011E26] mb-3">{value.title}</h3>
+                                                <p className="text-sm text-slate-600 leading-relaxed">{value.desc}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
 
@@ -107,43 +159,66 @@ const AboutSection: React.FC = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                        {[
-                            { step: "01", title: "Initial Consultation & Goal Mapping", desc: "We begin by understanding your academic history, career aspirations, preferred destinations, and long-term vision." },
-                            { step: "02", title: "Personalised Strategy & Country Selection", desc: "Based on your profile, we recommend the best countries, institutions, and programs outlining timelines and requirements." },
-                            { step: "03", title: "Application Preparation & Documentation", desc: "Our team assists with course selection, SOPs, personal statements, references, CVs, and all required documents." },
-                            { step: "04", title: "Coaching & Skill Development", desc: "We prepare you for language tests, academic expectations, interviews, and essential skills such as digital literacy." },
-                            { step: "05", title: "Visa & Legal Guidance", desc: "Our immigration advisors guide you through the visa process, ensuring compliance, accuracy, and strong documentation." },
-                            { step: "06", title: "Travel, Accommodation & Pre-Arrival", desc: "We help you plan your travel, arrange airport pickup, secure accommodation, and understand local orientation essentials." },
-                            { step: "07", title: "Post-Arrival & Ongoing Support", desc: "Once you arrive, we remain available to assist with settling in, adjusting to your new environment, and planning your next steps." }
-                        ].map((step, i) => (
-                            <div key={i} className="bg-[#022B36] p-6 rounded-sm border border-[#009B8F]/20 hover:border-[#009B8F] transition-colors group">
-                                <div className="text-4xl font-bold text-[#009B8F]/20 mb-4 group-hover:text-[#009B8F] transition-colors">{step.step}</div>
-                                <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
-                                <p className="text-xs text-slate-400 leading-relaxed">{step.desc}</p>
-                            </div>
-                        ))}
+                    <div className="flex justify-center">
+                        <button
+                            onClick={() => setShowProcessModal(true)}
+                            className="inline-flex items-center gap-2 border-2 border-[#009B8F] text-[#009B8F] px-8 py-3 font-bold tracking-widest uppercase text-xs hover:bg-[#009B8F] hover:text-white transition-all duration-300"
+                        >
+                            Read More <ArrowRight size={16} />
+                        </button>
                     </div>
+
+                    {/* Process Modal */}
+                    {showProcessModal && (
+                        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4">
+                            {/* Backdrop */}
+                            <div
+                                className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+                                onClick={() => setShowProcessModal(false)}
+                            ></div>
+
+                            {/* Modal Content */}
+                            <div className="bg-[#011E26] relative z-10 w-full max-w-6xl max-h-[90vh] overflow-y-auto rounded-sm shadow-2xl animate-fadeIn border border-[#009B8F]/30">
+                                <button
+                                    onClick={() => setShowProcessModal(false)}
+                                    className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white hover:bg-white/10 rounded-full transition-colors sticky z-20"
+                                >
+                                    <X size={32} />
+                                </button>
+
+                                <div className="p-8 md:p-12">
+                                    <div className="text-center mb-10">
+                                        <h2 className="text-3xl md:text-4xl font-serif text-white mb-6">Our Process</h2>
+                                        <p className="text-slate-400 max-w-2xl mx-auto">
+                                            Our process is designed to remove confusion and replace it with structure, clarity, and progress. Every stage is intentional and focused on preparing you for long-term success.
+                                        </p>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                        {[
+                                            { step: "01", title: "Initial Consultation & Goal Mapping", desc: "We begin by understanding your academic history, career aspirations, preferred destinations, and long-term vision." },
+                                            { step: "02", title: "Personalised Strategy & Country Selection", desc: "Based on your profile, we recommend the best countries, institutions, and programs outlining timelines and requirements." },
+                                            { step: "03", title: "Application Preparation & Documentation", desc: "Our team assists with course selection, SOPs, personal statements, references, CVs, and all required documents." },
+                                            { step: "04", title: "Coaching & Skill Development", desc: "We prepare you for language tests, academic expectations, interviews, and essential skills such as digital literacy." },
+                                            { step: "05", title: "Visa & Legal Guidance", desc: "Our immigration advisors guide you through the visa process, ensuring compliance, accuracy, and strong documentation." },
+                                            { step: "06", title: "Travel, Accommodation & Pre-Arrival", desc: "We help you plan your travel, arrange airport pickup, secure accommodation, and understand local orientation essentials." },
+                                            { step: "07", title: "Post-Arrival & Ongoing Support", desc: "Once you arrive, we remain available to assist with settling in, adjusting to your new environment, and planning your next steps." }
+                                        ].map((step, i) => (
+                                            <div key={i} className="bg-[#022B36] p-6 rounded-sm border border-[#009B8F]/20 hover:border-[#009B8F] transition-colors group">
+                                                <div className="text-4xl font-bold text-[#009B8F]/20 mb-4 group-hover:text-[#009B8F] transition-colors">{step.step}</div>
+                                                <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
+                                                <p className="text-xs text-slate-400 leading-relaxed">{step.desc}</p>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </section>
 
-            {/* Additional Services */}
-            <section className="py-16 px-6 md:px-8 bg-[#009B8F] text-white text-center">
-                <div className="max-w-4xl mx-auto">
-                    <h3 className="text-2xl font-serif mb-6">Additional Services</h3>
-                    <p className="text-lg font-light flex flex-wrap justify-center gap-x-8 gap-y-2">
-                        <span>Job search assistance</span>
-                        <span className="opacity-50">•</span>
-                        <span>Internships</span>
-                        <span className="opacity-50">•</span>
-                        <span>Investment migration</span>
-                        <span className="opacity-50">•</span>
-                        <span>Business setup</span>
-                        <span className="opacity-50">•</span>
-                        <span>Translation and notarization</span>
-                    </p>
-                </div>
-            </section>
+
         </div>
     );
 };

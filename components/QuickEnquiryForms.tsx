@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Send, ArrowRight } from 'lucide-react';
 
-type TabType = 'migrate' | 'work' | 'study' | 'visa';
+type TabType = 'admissions' | 'coaching' | 'visa' | 'accommodation';
 
 const QuickEnquiryForms: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<TabType>('migrate');
+  const [activeTab, setActiveTab] = useState<TabType>('admissions');
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -16,11 +16,10 @@ const QuickEnquiryForms: React.FC = () => {
   const TabButton = ({ id, label }: { id: TabType; label: string }) => (
     <button
       onClick={() => { setActiveTab(id); setSubmitted(false); }}
-      className={`flex-1 py-4 text-sm font-bold tracking-widest uppercase transition-all border-b-2 ${
-        activeTab === id
+      className={`flex-1 py-4 text-sm font-bold tracking-widest uppercase transition-all border-b-2 ${activeTab === id
           ? 'border-[#009B8F] text-[#009B8F] bg-white'
           : 'border-transparent text-slate-400 hover:text-[#011E26] bg-gray-50'
-      }`}
+        }`}
     >
       {label}
     </button>
@@ -30,18 +29,18 @@ const QuickEnquiryForms: React.FC = () => {
     <section className="py-20 bg-[#F3F4F6]" id="enquiry">
       <div className="max-w-4xl mx-auto px-6 md:px-8">
         <div className="text-center mb-12">
-           <span className="text-[#009B8F] font-bold tracking-widest text-xs uppercase mb-2 block">Free Counseling</span>
-           <h2 className="text-3xl md:text-4xl font-serif text-[#011E26]">Check Your Eligibility</h2>
-           <p className="mt-4 text-slate-600 font-light">Select a category below to start your free assessment.</p>
+          <span className="text-[#009B8F] font-bold tracking-widest text-xs uppercase mb-2 block">Free Counseling</span>
+          <h2 className="text-3xl md:text-4xl font-serif text-[#011E26]">Check Your Eligibility</h2>
+          <p className="mt-4 text-slate-600 font-light">Select a category below to start your free assessment.</p>
         </div>
 
         <div className="bg-white shadow-xl rounded-sm overflow-hidden">
           {/* Tabs */}
           <div className="flex flex-wrap border-b border-gray-100">
-            <TabButton id="migrate" label="Migrate" />
-            <TabButton id="work" label="Work" />
-            <TabButton id="study" label="Study" />
-            <TabButton id="visa" label="Visas" />
+            <TabButton id="admissions" label="Admissions" />
+            <TabButton id="coaching" label="Coaching" />
+            <TabButton id="visa" label="Visa" />
+            <TabButton id="accommodation" label="Accommodation" />
           </div>
 
           {/* Form Area */}
@@ -76,85 +75,72 @@ const QuickEnquiryForms: React.FC = () => {
                   </div>
 
                   {/* Dynamic Fields based on Tab */}
-                  {activeTab === 'migrate' && (
+                  {activeTab === 'admissions' && (
                     <>
                       <div className="space-y-1">
-                         <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Destination</label>
-                         <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
-                           <option>Australia</option>
-                           <option>Canada</option>
-                           <option>Germany</option>
-                           <option>UK</option>
-                           <option>USA</option>
-                         </select>
+                        <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Target Country</label>
+                        <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
+                          <option>USA</option>
+                          <option>UK</option>
+                          <option>Canada</option>
+                          <option>Australia</option>
+                          <option>Europe</option>
+                        </select>
                       </div>
                       <div className="space-y-1">
-                         <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Highest Qualification</label>
-                         <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
-                           <option>PhD</option>
-                           <option>Masters</option>
-                           <option>Bachelors</option>
-                           <option>Diploma</option>
-                           <option>Other</option>
-                         </select>
+                        <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Degree Level</label>
+                        <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
+                          <option>Bachelors</option>
+                          <option>Masters</option>
+                          <option>PhD</option>
+                          <option>Diploma</option>
+                        </select>
                       </div>
                     </>
                   )}
 
-                  {activeTab === 'work' && (
+                  {activeTab === 'coaching' && (
                     <>
                       <div className="space-y-1">
-                         <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Job Title</label>
-                         <input type="text" className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none" placeholder="Software Engineer" />
+                        <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Course Interest</label>
+                        <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
+                          <option>IELTS</option>
+                          <option>TOEFL</option>
+                          <option>PTE</option>
+                          <option>GRE/GMAT</option>
+                          <option>Interview Prep</option>
+                        </select>
                       </div>
                       <div className="space-y-1">
-                         <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Years of Experience</label>
-                         <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
-                           <option>0-2 Years</option>
-                           <option>3-5 Years</option>
-                           <option>5-10 Years</option>
-                           <option>10+ Years</option>
-                         </select>
-                      </div>
-                    </>
-                  )}
-
-                  {activeTab === 'study' && (
-                    <>
-                      <div className="space-y-1">
-                         <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Preferred Country</label>
-                         <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
-                           <option>USA</option>
-                           <option>UK</option>
-                           <option>Canada</option>
-                           <option>Australia</option>
-                           <option>Germany</option>
-                         </select>
-                      </div>
-                      <div className="space-y-1">
-                         <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Intake Year</label>
-                         <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
-                           <option>2024</option>
-                           <option>2025</option>
-                           <option>2026</option>
-                         </select>
+                        <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Preferred Mode</label>
+                        <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
+                          <option>Online</option>
+                          <option>Offline</option>
+                        </select>
                       </div>
                     </>
                   )}
 
                   {activeTab === 'visa' && (
+                    <div className="col-span-1 md:col-span-2 space-y-1">
+                      <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Destination Country</label>
+                      <input type="text" className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none" placeholder="e.g. UK, Canada" />
+                    </div>
+                  )}
+
+                  {activeTab === 'accommodation' && (
                     <>
-                       <div className="space-y-1">
-                         <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Visa Type</label>
-                         <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
-                           <option>Tourist / Visitor</option>
-                           <option>Business</option>
-                           <option>Dependent</option>
-                         </select>
+                      <div className="space-y-1">
+                        <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">City / Location</label>
+                        <input type="text" className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none" placeholder="Target City" />
                       </div>
                       <div className="space-y-1">
-                         <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Destination</label>
-                         <input type="text" className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none" placeholder="Enter Country" />
+                        <label className="text-xs font-bold text-[#011E26] uppercase tracking-wider">Accommodation Type</label>
+                        <select className="w-full p-3 bg-gray-50 border border-gray-200 focus:border-[#009B8F] outline-none">
+                          <option>Student Housing</option>
+                          <option>Private Rental</option>
+                          <option>Homestay</option>
+                        </select>
                       </div>
                     </>
                   )}

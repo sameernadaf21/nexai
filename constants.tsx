@@ -14,49 +14,28 @@ export const NAV_ITEMS: NavItem[] = [
     label: 'Admissions',
     href: '#admissions',
     subItems: [
-      'University Admission',
-      'College & School Admissions',
-      'Country Options',
+      'University Admissions',
+      'College Admissions',
       'Course Selection Guidance',
       'Application Support',
-      'SOP & Personal Statement Help',
-      'Document Preparation'
+      'SOP / Personal Statement Help',
+      'Scholarship Guidance',
+      'Document Preparation',
+      'Country Options (UK, USA, Canada, Australia, Europe)'
     ]
   },
   {
     label: 'Coaching',
     href: '#coaching',
     subItems: [
-      'Pre-Arrival Coaching',
       'Academic Preparation',
       'Skills Training',
       'Interview Preparation',
-      'Language Support',
-      'Student Readiness Programs'
-    ]
-  },
-  {
-    label: 'Visa',
-    href: '#visa',
-    subItems: [
-      'Student Visa',
-      'Dependent Visa',
-      'Visitor Visa',
-      'Work Visa',
-      'Business Visa'
-    ]
-  },
-  {
-    label: 'Travel & Transport',
-    href: '#travel',
-    subItems: [
-      'Flight & Travel Assistance',
-      'Airport Pickup',
-      'Accommodation Support',
-      'Local Transport Guidance',
-      'Safety & Orientation',
-      'Travel Insurance Guidance',
-      'Pre-Departure Checklist'
+      'Language Support (IELTS, TOEFL, Duolingo)',
+      'Course Selection Guidance',
+      'Student Readiness Programs',
+      'Cultural Orientation',
+      'Pre-Arrival Coaching'
     ]
   },
   {
@@ -66,9 +45,34 @@ export const NAV_ITEMS: NavItem[] = [
       'Immigration Advisory',
       'Student Visa Guidance',
       'Document Verification',
-      'Legal Consultation',
+      'Legal Consultation (via Registered Solicitors)',
       'Compliance & Documentation',
-      'Dependent & Family Visa Application Support'
+      'Dependent & Family Visa Support',
+      'Appeals Support'
+    ]
+  },
+  {
+    label: 'Travel & Transport',
+    href: '#travel',
+    subItems: [
+      'Pre-Departure Checklist',
+      'Flight & Travel Assistance',
+      'Travel Insurance Guidance',
+      'Accommodation Support',
+      'Airport Pickup',
+      'Local Transport Guidance'
+    ]
+  },
+  {
+    label: 'Accommodation',
+    href: '#accommodation',
+    subItems: [
+      'Student Accommodation Placement',
+      'Temporary Housing Support',
+      'Long-Term Rental Assistance',
+      'Homestay Arrangements',
+      'Accommodation Guidance',
+      'Safety & Location Advice'
     ]
   },
   {
@@ -81,46 +85,32 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const SERVICES: Service[] = [
   {
-    id: 'migrate',
-    title: 'Migrate Overseas',
-    icon: <Plane className="w-8 h-8 text-white" />,
-    description: 'Permanent Residency (PR) visas for Canada, Australia, UK, Germany, and more.',
-    link: '#migrate'
-  },
-  {
-    id: 'work',
-    title: 'Work Overseas',
-    icon: <Briefcase className="w-8 h-8 text-white" />,
-    description: 'Expert guidance on job search, resume marketing, and work permits.',
-    link: '#work'
-  },
-  {
-    id: 'study',
-    title: 'Study Overseas',
+    id: 'admissions',
+    title: 'Admissions',
     icon: <GraduationCap className="w-8 h-8 text-white" />,
-    description: 'Admissions assistance for top universities in USA, UK, Canada, Australia.',
-    link: '#study'
+    description: 'Expert guidance for University and College admissions, course selection, and application support.',
+    link: '#admissions'
   },
   {
     id: 'coaching',
     title: 'Coaching',
     icon: <BookOpen className="w-8 h-8 text-white" />,
-    description: 'World-class coaching for IELTS, PTE, TOEFL, GRE, GMAT, SAT and German.',
+    description: 'Comprehensive academic preparation, skills training, and language support (IELTS, TOEFL, Duolingo).',
     link: '#coaching'
   },
   {
-    id: 'visas',
-    title: 'Visa Services',
+    id: 'visa',
+    title: 'Visa',
     icon: <MapPin className="w-8 h-8 text-white" />,
-    description: 'Tourist, Business, and Dependent visas for 50+ countries.',
-    link: '#visas'
+    description: 'Specialized visa guidance for students, dependents, and families, including compliance support.',
+    link: '#visa'
   },
   {
-    id: 'invest',
-    title: 'Invest Overseas',
-    icon: <Anchor className="w-8 h-8 text-white" />,
-    description: 'Business and Investment visa solutions for entrepreneurs.',
-    link: '#invest'
+    id: 'accommodation',
+    title: 'Accommodation',
+    icon: <Anchor className="w-8 h-8 text-white" />, // Using Anchor for Accommodation as placeholder, usually Home/House icon is better but sticking to imports
+    description: 'Full support for student accommodation, temporary housing, and long-term rentals.',
+    link: '#accommodation'
   },
 ];
 
@@ -128,22 +118,22 @@ export const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
     name: "Sarah Jenkins",
-    visaType: "Canada PR",
-    message: "NexOverseas helped me navigate the complex Express Entry system. Their guidance was invaluable in boosting my CRS score.",
+    visaType: "Canada Student Visa",
+    message: "NexOverseas made my university application process seamless. The course selection guidance was spot on!",
     image: "https://picsum.photos/100/100?random=1"
   },
   {
     id: 2,
     name: "Rajesh Kumar",
-    visaType: "Australia Work Visa",
-    message: "The job search service was a game changer. I landed interviews within weeks of updating my resume with their help.",
+    visaType: "UK Student Visa",
+    message: "The coaching for IELTS was excellent. I got the band score I needed for my dream university.",
     image: "https://picsum.photos/100/100?random=2"
   },
   {
     id: 3,
     name: "Elena Rodriguez",
-    visaType: "UK Student Visa",
-    message: "From university selection to visa filing, the NexOverseas team was with me every step of the way.",
+    visaType: "Accommodation Support",
+    message: "Found great student housing thanks to their accommodation placement service. Safe and convenient!",
     image: "https://picsum.photos/100/100?random=3"
   }
 ];
