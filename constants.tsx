@@ -17,10 +17,9 @@ export const NAV_ITEMS: NavItem[] = [
       'University Admissions',
       'College Admissions',
       'Course Selection Guidance',
-      'Application Support',
-      'SOP / Personal Statement Help',
-      'Scholarship Guidance',
       'Document Preparation',
+      'Application Support',
+      'Scholarship Guidance',
       'Country Options (UK, USA, Canada, Australia, Europe)'
     ]
   },
@@ -29,12 +28,10 @@ export const NAV_ITEMS: NavItem[] = [
     href: '#coaching',
     subItems: [
       'Academic Preparation',
+      'Language Support (IELTS, TOEFL, Duolingo)',
       'Skills Training',
       'Interview Preparation',
-      'Language Support (IELTS, TOEFL, Duolingo)',
-      'Course Selection Guidance',
       'Student Readiness Programs',
-      'Cultural Orientation',
       'Pre-Arrival Coaching'
     ]
   },
@@ -48,11 +45,10 @@ export const NAV_ITEMS: NavItem[] = [
       'Legal Consultation (via Registered Solicitors)',
       'Compliance & Documentation',
       'Dependent & Family Visa Support',
-      'Appeals Support'
     ]
   },
   {
-    label: 'Travel & Transport',
+    label: 'Transport',
     href: '#travel',
     subItems: [
       'Pre-Departure Checklist',
@@ -67,12 +63,10 @@ export const NAV_ITEMS: NavItem[] = [
     label: 'Accommodation',
     href: '#accommodation',
     subItems: [
-      'Student Accommodation Placement',
-      'Temporary Housing Support',
-      'Long-Term Rental Assistance',
-      'Homestay Arrangements',
+      'Safety & Location Advice',
       'Accommodation Guidance',
-      'Safety & Location Advice'
+      'Temporary Housing Support',
+      'Long-Term Rental Assistance'
     ]
   },
   {
